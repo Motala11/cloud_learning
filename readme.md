@@ -14,10 +14,10 @@ Virtual machines --> Virtualisation = creating mini machines within our machines
 - Configure security group and network settings
 - Check out "Commands" to continue your setup
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
+![alt text](images/image.png)
+![alt text](images/image-1.png)
+![alt text](images/image-2.png)
+![alt text](images/image-3.png)
 
 
 ## Machine Images
@@ -63,5 +63,5 @@ The `systemctl status nginx` command allows you to verify if your software is ru
 
 ## Finishing up
 Once you have completed the steps, you can navigate to "Instances", find the IP address linked to your instance and enter it into a new tab. You should be directed to the instance you have created.<br>
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
