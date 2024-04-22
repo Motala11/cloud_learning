@@ -38,6 +38,10 @@ Linux is open-source, with many distributions (so it’s very customidable).
 <br>
 `$$`: In Unix-like shells, $$ represents the PID of the current shell.
 <br>
+`ps -A` OR `ps -e` will return all processes.
+<br>
+`ps aux` provides a detailed list of all processes in a user-oriented format, showing user ownership, memory and CPU usage, and other details.
+<br>
 `history` shows all the commands you have run, up until the 500th.
 <br>
 `history -c` clears your history.
@@ -77,24 +81,71 @@ Linux is open-source, with many distributions (so it’s very customidable).
 `export variable=variable name` at the bottom of the .bashrc file to script the variable.
 <br>
 `source .bashrc` to run the script and substantiate the variable.
+<br>
+`kill "processID"` is the default method of killing processes (kill signal 15).
+<br>
+`kill -9 "processID"` is the brute force kill and the absolute last resort, can produce zombies if you kill the parent process.
 
-## Nginx script
-`!/bin/bash`
+# Nginx script
+## Change permissions to execute the file
+`chmod +x file.txt`
+
+
+`# !/bin/bash`
 
 ## update
+echo updating...
 `sudo apt update -y`
+echo done!
+
+## Avoid user input
+sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 
 ## upgrade
+echo upgrade packages...
 `sudo apt upgrade -y`
+echo done!
 
 ## install nginx
+echo installing nginx...
 `sudo apt install nginx -y`
+echo done!
 
 ## restart nginx
+echo installing nginx...
 `sudo systemctl restart nginx`
+echo done!
 
 ## enable nginx
+echo installing nginx...
 `sudo systemctl enable nginx`
+echo done!
+
+## install js20
+echo install js20 <br>
+`curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs` <br>
+echo done
+
+## Check node version
+echo check node js version <br>
+`node -v` <br>
+echo done!
+
+## install app folder
+cd app folder <br>
+install npm <br>
+npm start app.js <br>
+
+## Copy the code of the app from a local machine to your EC2 instance.
+`scp -i your_ssh_key.pem -r path/to/your/local/code ec2-user@your_ec2_public_ip:/path/on/ec2`
+
+## Copy the code of the app to your EC2 instance using Github
+Create a Git repository, upload the code of the app to the repository and then clone the repository to the EC2 instance.
+
+## Run Node JS app in the background of the script.
+`npm start app.js &`
+
 
 
 ## Exercise
@@ -113,3 +164,7 @@ Linux is open-source, with many distributions (so it’s very customidable).
 
 `grep "chicken" chicken-joke.txt`
 
+## Linux rules
+- Do NOT hard code credentials
+- A script needs to be tested on a FRESH ec2 instance, to ensure that it runs as designed.
+- A script needs to be tested to see if it will run multiple times without causing an issue.
