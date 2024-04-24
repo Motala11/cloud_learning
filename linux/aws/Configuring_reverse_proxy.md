@@ -28,7 +28,7 @@
 ## Potential Blockers:
 ### Deploying app before the database is ready
 Be careful! You must ensure the database is built before you run the app. This was an error I was receiving. <br>
-When you navigate to the public IP address, it will work as intended. However, when you specify the `/posts` page, you will get the "Pretty print" JSON format.![alt text](images/pretty_print_error.png) <br> <br>
+When you navigate to the public IP address, it will work as intended. However, when you specify the `/posts` page, you will get the "Pretty print" JSON format.<br>![alt text](images/pretty_print_error.png) <br> <br>
 You can check if the app is connecting to the database by running `sudo npm install` in the specified app folder. If you receive the error "`database closed`", but the database is running (checked through `systemctl status mongod`), then the app has been deployed before the database has not been instantiated before the app was deployed. <br>
 <br>
 Restart the process but ensure the database has been completed before running the app.
