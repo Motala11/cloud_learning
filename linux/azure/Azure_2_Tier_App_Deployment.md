@@ -18,14 +18,14 @@ You will then be asked to name the key, name it as you wish but make sure it has
 
 ### Creating SSH key on Azure
  1. Join a resource group on Azure. <br>
-![alt text](images\Resource_group.png)
- 2. Search "SSH keys" in the searchbar.
- 3. Click on create "SSH Keys".
- 4. Select your resource group from the dropdown menu.
- 5. Name your key pair appropriately.
- 6. Select upload existing public key.
- 7. Upload the key, this will be the `cat <name_of_your_key.pub` text that is printed. Ensure there is no blank space!
- 8. Next, create a tag of "owner: name" to make billing easier.
+![alt text](images/Resource_group.png)
+ 1. Search "SSH keys" in the searchbar.
+ 2. Click on create "SSH Keys".
+ 3. Select your resource group from the dropdown menu.
+ 4. Name your key pair appropriately.
+ 5. Select upload existing public key.
+ 6. Upload the key, this will be the `cat <name_of_your_key.pub` text that is printed. Ensure there is no blank space!
+ 7. Next, create a tag of "owner: name" to make billing easier.
 
 ### Creating VNet on Azure
 1. Search virtual net on Azure. <br>
@@ -41,7 +41,7 @@ You will then be asked to name the key, name it as you wish but make sure it has
 ### Creating virtual machines on Azure
 1. Search virtual machine on Azure.
 2. Click on create virtual machine.
-![alt text](images\vm.png)
+![alt text](images/vm.png)
 3. Name your virtual machine appropriately, specify whether it is for the database or for the app.
 4. Select "Ubuntu Pro 22.04 LTS" as the Image.
 5. Select "x64 Gen2" .
