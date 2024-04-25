@@ -29,24 +29,26 @@ You will then be asked to name the key, name it as you wish but make sure it has
 
 ### Creating VNet on Azure
 1. Search virtual net on Azure. <br>
-![alt text] (images\Vnet-main-page.PNG)
+![!\[alt text\] (images\Vnet-main-page.PNG)](images/Vnet-main-page.PNG)
 2. Click on create virtual net.
 3. Name your virtual net appropriately.
 4. Configure your address space appropriately.
 5. Click on create subnet, you will need to do this twice!
 6. First, create a subnet named "public-subnet", the address range should be "10.0.2.0/24".
-7. Secondly, create a subnet named "private-subnet", the address range should be "10.0.3.0/24".
+7. Secondly, create a subnet named "private-subnet", the address range should be "10.0.3.0/24". <br>
+![alt text](images/Vnet-main-page.PNG)
 
 ### Creating virtual machines on Azure
 1. Search virtual machine on Azure.
 2. Click on create virtual machine.
+![alt text](images\vm.png)
 3. Name your virtual machine appropriately, specify whether it is for the database or for the app.
 4. Select "Ubuntu Pro 22.04 LTS" as the Image.
 5. Select "x64 Gen2" .
 6. The size should be "Standard_B1s".
 7. Allow access to the ports 80 and 22.
 8. Change the username to "adminuser".
-9. Select the keypair you generated earlier.
+9.  Select the keypair you generated earlier.
 10. Change the disk size to standard SSD.
 11. Use the Vnet you created earlier, use the public subnet for the app vm, and the private subnet for the database vm.
 12. Don't forget the owner tag!
