@@ -7,6 +7,9 @@ Welcome to this step-by-step guide on how to do a 2 Tier Deployment on Azure!
     - [Creating SSH key on Azure](#creating-ssh-key-on-azure)
     - [Creating VNet on Azure](#creating-vnet-on-azure)
     - [Creating virtual machines on Azure](#creating-virtual-machines-on-azure)
+    - [Blockers](#blockers)
+  - [1. Ensuring the database has been created before running the app file.](#1-ensuring-the-database-has-been-created-before-running-the-app-file)
+  - [2. Connecting the app and database to the correct subnets!](#2-connecting-the-app-and-database-to-the-correct-subnets)
 
 ### Establishing security for your app
 To ensure no one besides those who are intended to, have access to your app, make sure to create an SSH private-public key pair.
@@ -53,3 +56,11 @@ You will then be asked to name the key, name it as you wish but make sure it has
 11. Use the Vnet you created earlier, use the public subnet for the app vm, and the private subnet for the database vm.
 12. Don't forget the owner tag!
 
+### Blockers
+If you're encountering any issues, make sure to double check for any easy oversights!
+
+## 1. Ensuring the database has been created before running the app file.
+If you do run the app script before the database has been created, you will receive an error as the app itself will not be able to connect with the database.
+
+## 2. Connecting the app and database to the correct subnets!
+Remember, the app should connect to the public subnet whilst the database should connect to the private subnet!
