@@ -4,6 +4,17 @@ User images are used when you launch a server with the script you wish to run al
 <br>
 ![alt text](images/Levels_of_automation.png)
 
+- [Welcome to a guide on how to do a user image deployment on Azure.](#welcome-to-a-guide-on-how-to-do-a-user-image-deployment-on-azure)
+    - [How to set up user data](#how-to-set-up-user-data)
+    - [How to set up  images](#how-to-set-up--images)
+    - [Verify](#verify)
+    - [Patience is a virtue!](#patience-is-a-virtue)
+    - [What is an Azure Image - what does it include, what is the equivalent called on AWS](#what-is-an-azure-image---what-does-it-include-what-is-the-equivalent-called-on-aws)
+    - [What is not included in the image and why](#what-is-not-included-in-the-image-and-why)
+    - [What is the side-effect of creating an image of a VM on Azure? (After creating the image, can you log back into the VM used to create the image?)](#what-is-the-side-effect-of-creating-an-image-of-a-vm-on-azure-after-creating-the-image-can-you-log-back-into-the-vm-used-to-create-the-image)
+    - [The little bit of user data needed to get the app running with the posts page (and what can be commented out if you don't need the posts page to work)](#the-little-bit-of-user-data-needed-to-get-the-app-running-with-the-posts-page-and-what-can-be-commented-out-if-you-dont-need-the-posts-page-to-work)
+
+
 ### How to set up user data
 Setting up user data is incredibly simple! All you have to do is navigate to the "Advanced" section of a virtual machine creation, tick the box that enables user data and submit your code. That is it!
 
