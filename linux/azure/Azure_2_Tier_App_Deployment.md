@@ -64,3 +64,4 @@ If you do run the app script before the database has been created, you will rece
 
 ## 2. Connecting the app and database to the correct subnets!
 Remember, the app should connect to the public subnet whilst the database should connect to the private subnet!
+
