@@ -8,6 +8,14 @@ By default, there is a minimum of 2 VMs which means if one does go down, the oth
     - [High availability](#high-availability)
     - [High scalability](#high-scalability)
     - [Load balancers](#load-balancers)
+    - [Prerequisites of making a Scale set](#prerequisites-of-making-a-scale-set)
+    - [How to make a Scale set](#how-to-make-a-scale-set)
+    - [How to test the Scale set works](#how-to-test-the-scale-set-works)
+    - [How to manage instances](#how-to-manage-instances)
+    - [Steps on how to create an unhealthy instance (for testing) and WHY it is considered healthy/unhealthy](#steps-on-how-to-create-an-unhealthy-instance-for-testing-and-why-it-is-considered-healthyunhealthy)
+    - [How to SSH into an instance in your Scale set](#how-to-ssh-into-an-instance-in-your-scale-set)
+    - [How to delete a Scale set and all of the connecting parts](#how-to-delete-a-scale-set-and-all-of-the-connecting-parts)
+
 
 Virtual Machine scale sets are used to improve both availability and scalability. <br> <br>
 
