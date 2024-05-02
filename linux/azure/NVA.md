@@ -5,7 +5,9 @@
  Need to make sure only traffic we desire, is allowed through. So only traffic we want to the DB, is allowed through the private subnet.
  To do this, we need to set up 2 routes.
 
-![alt text](images/NVA_diagram.png)
+ ![alt text](image.png)
+
+
 
 ### Diagram explanation
 The diagram explains the added security of a DMZ subnet. <br>
