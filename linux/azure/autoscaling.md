@@ -31,15 +31,19 @@ Before you make a Scale set, you must have the following:
 ### How to make a Scale set
 To make a Scale set, you need to:
 1. Click create new Scale set.
+   ![alt text](images/create-vmss.png)
 2. Name it appropriately.
 3. Choose whether you want the orchestration mode to be flexible or uniform.
+   ![alt text](images/orchestration.png)
 4. Choose what type of scaling you desire, outline the custom scaling parameters.
 5. Choose the instance count.
+   ![alt text](images/scaling-condition.png)
 6. Choose your custom Image.
 7. Fill out security details as appropriate.
 8. Choose the correct Network details.
-9. Create a load balancer, to use the ports you need.
-10. Select "Enable health monitoring" and "Enable automatic repairs".
+9.  Create a load balancer, to use the ports you need.
+    ![alt text](images/lb.png)
+10.  Select "Enable health monitoring" and "Enable automatic repairs".
 11. Input your user data in the Advanced section.
 12. Review all your details are correct, and create.
  
