@@ -41,7 +41,7 @@
    ![alt text](images/update-cli.PNG)
 2. Then, run the `sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y` command to upgrade the instance. Remember to be careful! This is a dangerous process.
    ![alt text](images/upgrade-cli.PNG)
-3. `sudo apt-get install python3-pip -y`
+3. `sudo apt-get install python3-pip -y` <br>
    ![alt text](images/install-python.PNG)
 4. `python3 --version` to verify what version of Python you have installed.
 5.  `sudo pip install awscli` <br>
