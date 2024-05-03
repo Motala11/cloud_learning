@@ -154,9 +154,9 @@ def upload_file_to_s3(bucket_name, file_name, object_name):
     s3 = boto3.client('s3')
 
     # Upload the file
-    s3.upload_file(file_name, bucket_name, object_name)
+    s3.upload_file(file_name, tech258-mohammed-test-boto3, object_name)
 
-    print(f"File '{file_name}' uploaded to '{bucket_name}' as '{object_name}'.")
+    print(f"File '{file_name}' uploaded to '{tech258-mohammed-test-boto3}' as '{object_name}'.")
 ```
 #### Download/retrieve content/file from the S3 bucket:
 ```
@@ -167,9 +167,9 @@ def download_file_from_s3(bucket_name, object_name, file_name):
     s3 = boto3.client('s3')
 
     # Download the file
-    s3.download_file(bucket_name, object_name, file_name)
+    s3.download_file(tech258-mohammed-test-boto3, object_name, file_name)
 
-    print(f"File '{object_name}' downloaded from '{bucket_name}' as '{file_name}'.")
+    print(f"File '{object_name}' downloaded from '{tech258-mohammed-test-boto3}' as '{file_name}'.")
 ```
 #### Delete content/file from the S3 bucket:
 ```
@@ -182,7 +182,7 @@ def delete_file_from_s3(bucket_name, object_name):
     # Delete the file/object
     s3.delete_object(Bucket=bucket_name, Key=object_name)
 
-    print(f"File '{object_name}' deleted from '{bucket_name}'.")
+    print(f"File '{object_name}' deleted from '{tech258-mohammed-test-boto3}'.")
 ```
 #### Delete the bucket:
 ```
@@ -195,5 +195,5 @@ def delete_s3_bucket(bucket_name):
     # Delete the bucket
     s3.delete_bucket(Bucket=bucket_name)
 
-    print(f"S3 Bucket '{bucket_name}' deleted successfully.")
+    print(f"S3 Bucket '{tech258-mohammed-test-boto3}' deleted successfully.")
 ```
