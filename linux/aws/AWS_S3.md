@@ -119,23 +119,13 @@
 ```
 import boto3
 
-def list_s3_buckets():
-    # Create an S3 client
-    s3 = boto3.client('s3')
-
-    # List all buckets
-    response = s3.list_buckets()
-
-    # Print bucket names
-    print("List of S3 Buckets:")
-    for bucket in response['Buckets']:
-        print(bucket['Name'])
-
-if __name__ == "__main__":
-    list_s3_buckets()
+# Print out bucket names
+for bucket in s3.buckets.all():
+    print(bucket.name)
 ```
+
 <br>
-Run using `python3 list_bucket.py` script. 
+Run this by using the `python3 list_bucket.py` script. 
 
 ![alt text](images/list-bucket-script.PNG)
 
@@ -147,14 +137,13 @@ def create_s3_bucket(bucket_name):
     # Create an S3 client
     s3 = boto3.client('s3')
 
+    # Select appropriate bucket name
+    bucket_name = 'tech258-mohammed-test-boto3'
+
     # Create the bucket
     s3.create_bucket(Bucket=bucket_name)
 
     print(f"S3 Bucket '{bucket_name}' created successfully.")
-
-if __name__ == "__main__":
-    bucket_name = 'tech258-yourname-test-boto3'  # Specify your desired bucket name
-    create_s3_bucket(bucket_name)
 ```
 #### Upload data/file to the S3 bucket:
 ```
@@ -168,12 +157,6 @@ def upload_file_to_s3(bucket_name, file_name, object_name):
     s3.upload_file(file_name, bucket_name, object_name)
 
     print(f"File '{file_name}' uploaded to '{bucket_name}' as '{object_name}'.")
-
-if __name__ == "__main__":
-    bucket_name = 'tech257-ramon-test-boto3'  # Specify your S3 bucket name
-    file_name = '/path/to/local/file.txt'      # Specify the local file path to upload
-    object_name = 'uploaded_file.txt'           # Specify the name for the object in S3
-    upload_file_to_s3(bucket_name, file_name, object_name)
 ```
 #### Download/retrieve content/file from the S3 bucket:
 ```
@@ -187,12 +170,6 @@ def download_file_from_s3(bucket_name, object_name, file_name):
     s3.download_file(bucket_name, object_name, file_name)
 
     print(f"File '{object_name}' downloaded from '{bucket_name}' as '{file_name}'.")
-
-if __name__ == "__main__":
-    bucket_name = 'tech257-ramon-test-boto3'  # Specify your S3 bucket name
-    object_name = 'uploaded_file.txt'          # Specify the name of the object in S3
-    file_name = '/path/to/save/downloaded_file.txt'  # Specify the local file path to save
-    download_file_from_s3(bucket_name, object_name, file_name)
 ```
 #### Delete content/file from the S3 bucket:
 ```
@@ -206,11 +183,6 @@ def delete_file_from_s3(bucket_name, object_name):
     s3.delete_object(Bucket=bucket_name, Key=object_name)
 
     print(f"File '{object_name}' deleted from '{bucket_name}'.")
-
-if __name__ == "__main__":
-    bucket_name = 'tech257-ramon-test-boto3'  # Specify your S3 bucket name
-    object_name = 'uploaded_file.txt'          # Specify the name of the object to delete
-    delete_file_from_s3(bucket_name, object_name)
 ```
 #### Delete the bucket:
 ```
@@ -224,8 +196,4 @@ def delete_s3_bucket(bucket_name):
     s3.delete_bucket(Bucket=bucket_name)
 
     print(f"S3 Bucket '{bucket_name}' deleted successfully.")
-
-if __name__ == "__main__":
-    bucket_name = 'tech257-ramon-test-boto3'  # Specify the bucket name to delete
-    delete_s3_bucket(bucket_name)
 ```
