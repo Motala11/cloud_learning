@@ -14,6 +14,7 @@ By default, there is a minimum of 2 VMs which means if one does go down, the oth
       - [Apache Bench - Load Testing](#apache-bench---load-testing)
     - [How to manage instances](#how-to-manage-instances)
     - [Steps on how to create an unhealthy instance (for testing) and WHY it is considered healthy/unhealthy](#steps-on-how-to-create-an-unhealthy-instance-for-testing-and-why-it-is-considered-healthyunhealthy)
+      - [Creating unhealthy instance using incorrect user data](#creating-unhealthy-instance-using-incorrect-user-data)
     - [How to SSH into an instance in your Scale set](#how-to-ssh-into-an-instance-in-your-scale-set)
     - [How to delete a Scale set and all of the connecting parts](#how-to-delete-a-scale-set-and-all-of-the-connecting-parts)
 
@@ -87,6 +88,11 @@ To create unhealthy instances, you need to implement failure conditions, such as
 - Application-level failures
 
 Creating an intentionally unhealthy instance for testing purposes helps evaluate the resilience and fault tolerance of your system.<br> You can identify weaknesses, optimize recovery strategies, and ensure that your system behaves predictably under adverse conditions.<br> The reasons an instance is marked as healthy or unhealthy often depend on predefined criteria, thresholds, and the specific health checks implemented in your system's monitoring and management processes.
+
+#### Creating unhealthy instance using incorrect user data
+1. If your user data is not correct, you may get a "Bad gateway" error on your website.
+2. Correct this via the steps highlighted above in the image.
+3. Click "Upgrade" on your virtual machine. It is essential to "Upgrade" and not "Reimage". Upgrading will upgrade your instances to use the newly inputed user data, whilst reimaging will restore the instances to their initial state.
 
 ### How to SSH into an instance in your Scale set
 To SSH into your instance, you must do the following:
