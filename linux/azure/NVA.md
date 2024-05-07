@@ -10,6 +10,7 @@
     - [Create route table](#create-route-table)
     - [IP configuration](#ip-configuration)
     - [Code explained](#code-explained)
+      - [Key:](#key)
 
 
 ![alt text](images/NVA_updated.png)
@@ -145,3 +146,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt install iptables-persistent -y
 echo "Done!"
 echo ""
 ```
+
+#### Key:
+1. `-A` represents append.
+2. `--sport` represents source port
+3. `-m state` uses the "state" module to match packets based on their connection state.
+4. `--state ESTABLISHED` matches packets that are associated with an established connection.
+5. `-j ACCEPT` specifies the action to take if the packet matches all the previous conditions, in this case, the action is to accept.
