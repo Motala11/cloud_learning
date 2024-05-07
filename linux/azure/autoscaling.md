@@ -72,7 +72,13 @@ Load testing is testing the behaviour of a system under specific load conditions
 `-n` denotes the total number of requests whilst `-c` is the speed of requests being sent. If this was not enough to spike the CPU, you can re-run the test with increased numbers.
 
 ### How to manage instances
-Reimaging is when you restore a server back to its original state. Upgrading involves updating the existing software to a newer version, whilst retaining user data and configurations.
+Reimaging is when you restore a server back to its original state. Upgrading involves updating the existing software to a newer version, whilst retaining user data and configurations. <br>
+If you have made an error in your user data, you can alter this if you do the following:
+1. Go to "Operating System" on the "Settings" page.
+2. Check your "User data" and correct any errors. <br>
+
+![alt text](images/user-data-modify.png)
+
 ### Steps on how to create an unhealthy instance (for testing) and WHY it is considered healthy/unhealthy
 To create unhealthy instances, you need to implement failure conditions, such as:
 - Resource overload
