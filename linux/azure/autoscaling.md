@@ -11,6 +11,7 @@ By default, there is a minimum of 2 VMs which means if one does go down, the oth
     - [Prerequisites of making a Scale set](#prerequisites-of-making-a-scale-set)
     - [How to make a Scale set](#how-to-make-a-scale-set)
     - [How to test the Scale set works](#how-to-test-the-scale-set-works)
+      - [Apache Bench - Load Testing](#apache-bench---load-testing)
     - [How to manage instances](#how-to-manage-instances)
     - [Steps on how to create an unhealthy instance (for testing) and WHY it is considered healthy/unhealthy](#steps-on-how-to-create-an-unhealthy-instance-for-testing-and-why-it-is-considered-healthyunhealthy)
     - [How to SSH into an instance in your Scale set](#how-to-ssh-into-an-instance-in-your-scale-set)
@@ -57,6 +58,19 @@ To make a Scale set, you need to:
  
 ### How to test the Scale set works
 To test the scale set works, you can check the public IP address. If it works as intended, it should redirect you to your homepage.
+<br> <br>
+To test the health monitoring aspect of a Scale set, we can do this using Apache Bench. <br>
+Load testing is testing the behaviour of a system under specific load conditions.<br>
+
+#### Apache Bench - Load Testing
+1. Install Apache Bench using the command: <br>
+   `sudo apt-get install apache2-utils`
+2. Check installation using the command: <br>
+   `ab`
+3. We are testing our CPU, to do this, we must increase CPU Usage. We can do this via the following: <br>
+`ab -n 1000 -c 100 http://yourip/` <Br>
+`-n` denotes the total number of requests whilst `-c` is the speed of requests being sent. If this was not enough to spike the CPU, you can re-run the test with increased numbers.
+
 ### How to manage instances
 Reimaging is when you restore a server back to its original state. Upgrading involves updating the existing software to a newer version, whilst retaining user data and configurations.
 ### Steps on how to create an unhealthy instance (for testing) and WHY it is considered healthy/unhealthy
@@ -67,6 +81,7 @@ To create unhealthy instances, you need to implement failure conditions, such as
 - Application-level failures
 
 Creating an intentionally unhealthy instance for testing purposes helps evaluate the resilience and fault tolerance of your system.<br> You can identify weaknesses, optimize recovery strategies, and ensure that your system behaves predictably under adverse conditions.<br> The reasons an instance is marked as healthy or unhealthy often depend on predefined criteria, thresholds, and the specific health checks implemented in your system's monitoring and management processes.
+
 ### How to SSH into an instance in your Scale set
 To SSH into your instance, you must do the following:
 1. Copy and paste the provided code by Azure, when you click on the "Connect" tab.
